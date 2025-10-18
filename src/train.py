@@ -24,7 +24,7 @@ def main():
     )
 
     cat_cols = ["gender", "race_ethnicity", "parent_edu", "lunch", "test_prep"]
-    num_cols = ["math", "reading", "writing", "avg_score", "parent_college"]
+    num_cols = ["math", "reading", "writing", "parent_college"]
 
     preprocessor = ColumnTransformer([
         ("cat", OneHotEncoder(handle_unknown="ignore"), cat_cols),

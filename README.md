@@ -1,66 +1,15 @@
-# Student Grade Classifier (Shallow ML)
+## Grade Classifier
 
-**Goal:** Predict a student's *letter grade* (A/B/C/D/F) using shallow learning techniques from study context and exam scores.
+**Description:** Use various different metrics about students like their parents colllege level or weather they get free lunch or not to try and predict their final grades
 
-This repository is structured to satisfy the midterm specification you provided: baseline vs. shallow models, proper evaluation, reproducibility, and a short video/walkthrough.
+**Motivation:** I would like to do this not only because it is interesting but also I think things like this can help students, espceially those who might need more support than others in order to produce better learning results, such as students with free/reduced lunch most of the time prefrom worse than the others and that means that their living condition and wealth do have an effect on their grades, meaning that giving those students more support would most likely help them to perform better in school
 
-## Dataset
+**Setup/Installation**
+- install all of the dependencies in the requirments file
+- run python -m src.train in order to run the training file
+- view the rerults in the results folder
+# Note: all of this was done on CSCode and was run with the python environment of 3.17
 
-- **Primary:** *Students Performance in Exams* — Kaggle (SPScientist, CC0)
-- Local copy saved at `data/StudentsPerformance.csv`.
-- Columns (original): `gender`, `race/ethnicity`, `parental level of education`, `lunch`, `test preparation course`, `math score`, `reading score`, `writing score`.
-- Engineered:
-  - `avg_score = (math + reading + writing)/3`
-  - `parent_college = 1 if parental education indicates any college/associate/bachelor/master else 0`
-  - `letter_grade` from `avg_score` using standard 10-point bins: A (90+), B (80-89), C (70-79), D (60-69), F (<60).
+**Reproduce Results:** to reproduce the results just follow the setup/install process as that should be all that is nececary seeeing as how the seed is pre set to 42
 
-## Quickstart
-
-```bash
-# (optional) create/activate a venv first
-pip install -r requirements.txt
-
-# Run the training script end-to-end
-python -m src.train
-```
-
-Outputs (confusion matrices, metrics tables) are written to `results/` and also printed.
-A fully reproducible EDA + modeling notebook is in `notebooks/midterm_pipeline.ipynb`.
-
-## Reproducibility
-
-- Random seeds fixed (`RANDOM_STATE=42`).
-- Versions pinned in `requirements.txt`.
-- Script reads `data/StudentsPerformance.csv`. If missing, update `DATA_PATH` in `src/constants.py`.
-
-## Repository Layout
-
-```
-student-grade-classifier/
-├── README.md
-├── requirements.txt
-├── data/
-│   └── StudentsPerformance.csv
-├── notebooks/
-│   └── midterm_pipeline.ipynb
-├── src/
-│   ├── constants.py
-│   ├── features.py
-│   ├── evaluation.py
-│   └── train.py
-├── results/
-└── presentation/
-```
-
-## How to Reproduce Results
-
-1. Install dependencies and run `python -m src.train`.
-2. Check `results/` for figures and metrics CSV.
-3. Optionally open the notebook for EDA and re-run cells.
-
-## Notes
-
-- Baseline: Majority-class classifier.
-- Models: Logistic Regression, Decision Tree, k-NN.
-- Metrics: Accuracy, macro-F1; confusion matrices saved as PNG.
-- Split: Stratified train/test split (80/20) + cross-validation (5-fold) on train.
+**Key Findings:** Some of the ai findings that I found are that studying prep always helps, lunch type actually matters as it shows possible bad conditions at the home of the student affecting study conditions, and the parents education level did also matter in the end, all this shows that the economic status and preperation for the tests are all factors that will lead to higher or lower test grades for the students
