@@ -1,0 +1,5 @@
+Model,Accuracy,F1 Score,Mean
+Baseline,0.285,0.08871595330739299,0.08871
+Logistic Regression,0.95,0.9413764191191902,0.93449
+Decision Tree,1.0,1.0,1.0
+k-NN,0.88,0.872678588016732,0.80869
