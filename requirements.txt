@@ -1,6 +1,0 @@
-# Core
-pandas==2.2.2
-numpy==1.26.4
-scikit-learn==1.5.2
-matplotlib==3.8.4
-# Optional for nicer reports (not strictly required)
