@@ -8,7 +8,7 @@
 - install all of the dependencies in the requirments file
 - run python -m src.train in order to run the training file
 - view the rerults in the results folder
-# Note: all of this was done on CSCode and was run with the python environment of 3.17
+# Note: all of this was done on VSCode and was run with the python environment of 3.17
 
 **Reproduce Results:** to reproduce the results just follow the setup/install process as that should be all that is nececary seeeing as how the seed is pre set to 42
 
