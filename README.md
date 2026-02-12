@@ -2,9 +2,6 @@
 
 A comparative machine learning project that predicts student letter grades based on demographic and academic factors using multiple classification algorithms.
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white)
-
 ## Project Overview
 
 This project explores how various socioeconomic and educational factors influence student academic performance. By analyzing factors such as parental education level, lunch program participation, test preparation, and prior test scores, the model predicts letter grades (A, B, C, D, F) and identifies key indicators of student success.
