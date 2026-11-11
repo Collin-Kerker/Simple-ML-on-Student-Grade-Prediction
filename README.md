@@ -73,8 +73,8 @@ These findings suggest that both academic support (test prep) and addressing soc
 
 1. Clone the repository
 ```bash
-git clone https://github.com/BetterButterBoy/422Midterm.git
-cd 422Midterm
+git clone https://github.com/Collin-Kerker/Simple-ML-on-Student-Grade-Prediction.git
+cd Simple-ML-on-Student-Grade-Prediction
 ```
 
 2. Install dependencies
@@ -94,7 +94,7 @@ scikit-learn
 
 ### Option 1: Jupyter Notebook (Recommended)
 ```bash
-jupyter notebook Midterm_Everything.ipynb
+jupyter notebook notebooks_and_results/Simple_ML_Notebook.ipynb
 ```
 Run all cells to see data exploration, model training, and results.
 
@@ -132,15 +132,19 @@ The project uses scikit-learn pipelines with the following preprocessing:
 ## Project Structure
 
 ```
-422Midterm/
+Simple-ML-on-Student-Grade-Prediction/
 ├── data/
-│   └── KaggleStudentsData.csv      # Raw dataset
+│   └── KaggleStudentsData.csv            # Raw dataset (1,000 rows)
 ├── src/
-│   └── train.py                     # Training script
-├── results/                         # Model outputs and metrics
-├── Midterm_Everything.ipynb         # Main analysis notebook
-├── requirements.txt                 # Python dependencies
-└── README.md                        # This file
+│   ├── constants.py                      # Paths, random seed, target label
+│   ├── features.py                       # Loading, feature engineering, letter-grade target
+│   ├── evaluation.py                     # Metrics and confusion-matrix plots
+│   └── train.py                          # Trains and evaluates all four models
+├── notebooks_and_results/
+│   └── Simple_ML_Notebook.ipynb          # Exploration and full analysis
+├── results/                              # Confusion matrices + metrics_summary.csv
+├── requirements.txt
+└── README.md
 ```
 
 ## Future Improvements
@@ -161,16 +165,12 @@ The project uses scikit-learn pipelines with the following preprocessing:
 - Understanding how socioeconomic factors influence educational outcomes
 - Practical application of statistical learning concepts
 
-## License
+## Context
 
-This project was created as a midterm assignment for EGR422 at California Baptist University.
+Midterm project for EGR 422 at California Baptist University.
 
 ## Author
 
 **Collin Kerker**  
 Computer Science Student @ California Baptist University  
-[GitHub](https://github.com/BetterButterBoy) | [LinkedIn](https://www.linkedin.com/in/collin-kerker/)
-
----
-
-*This project demonstrates practical machine learning skills in classification, model comparison, and educational data analysis.*
+[GitHub](https://github.com/Collin-Kerker) | [LinkedIn](https://www.linkedin.com/in/collin-kerker/)
